@@ -1,0 +1,19 @@
+[project]
+name = "toxic-comment-classification-challenge"
+description = "Toxic Comment Classification Challenge"
+version = "0.1.0"
+requires-python = ">=3.9.0"
+
+dependencies = []
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.dependencies]
+google-genai = { version = ">=1.13.0,<2.0.0"}
+torch = { version = ">=2.7.0,<3.0.0", source="pytorch_cuda"}
+
+[[tool.poetry.source]]
+name = "pytorch_cuda"
+url = "https://download.pytorch.org/whl/cu128"
+priority = "explicit"
