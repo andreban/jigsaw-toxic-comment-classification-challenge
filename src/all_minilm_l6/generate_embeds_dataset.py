@@ -21,7 +21,9 @@ with open("data/train.csv", "r", encoding="utf-8") as dataset_file:
         record_count = 0
         for entry in dataset_csv:
             record_count += 1
-            print(record_count)
+            if (record_count % 10 == 0):
+                print(record_count)
+                
             if (record_count <= skip_lines):
                 continue
 

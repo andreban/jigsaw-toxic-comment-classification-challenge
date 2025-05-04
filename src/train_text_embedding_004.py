@@ -5,6 +5,9 @@ import torch.optim as optim
 from text_embedding_004.toxicity_model import ToxicityModel
 from toxicity_training import train_model
 
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
+print(f"Using device: {device}")
+torch.set_default_device(device)
 torch.manual_seed(1)
 
 model = ToxicityModel()
@@ -17,7 +20,8 @@ train_model(
     optimizer=optimizer,
     loss_fn=loss_fn,
     batch_size=512,
-    epochs=100
+    epochs=100,
+    device=device
 )
 
 torch.save(model.state_dict(), 'YT-comments-text-embedding-004-768-10k.safetensors')
