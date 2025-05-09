@@ -5,7 +5,7 @@ from google.genai import types
 import time
 from pathlib import Path
 
-GOOGLE_GENAI_API_KEY = "AIzaSyDDDJbeeiAJn-6A5gwxp5Wn_pJT-JwVYwA"
+GOOGLE_GENAI_API_KEY = "YOUR_API_KEY"
 EMBEDDING_MODEL = "text-embedding-004"
 OUTPUT_DIMENSIONALITY = 768
 OUTPUT_FILE = f"YT-comments-{EMBEDDING_MODEL}-{OUTPUT_DIMENSIONALITY}.jsonl"
